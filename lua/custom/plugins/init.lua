@@ -5,10 +5,13 @@
 return {
 
   --NOTE: Custom keymaps
-  vim.keymap.set('n', '<leader>mf', '<cmd>Ex<cr>'),
-  --Moving cursor in insert more
-  -- vim.keymap.set('i', '<C-h>', '<LEFT>', { desc = 'LEFT' }),
-  -- vim.keymap.set('i', '<C-l>', '<RIGHT>', { desc = 'RIGHT' }),
-  -- vim.keymap.set('i', '<C-k>', '<UP>', { desc = 'UP' }),
-  -- vim.keymap.set('i', '<C-j>', '<DOWN>', { desc = 'DOWN' }),
+  vim.keymap.set('n', '<leader>ge', '<cmd>Ex<cr>', { desc = 'Goto main files explorer' }),
+  vim.keymap.set('n', ';;', '<cmd>e #<cr>', { desc = 'Switch to Other Buffer' }),
+  -- Move lines
+  vim.keymap.set('n', '<C-j>', '<cmd>m .+1<cr>==', { desc = 'Move down' }),
+  vim.keymap.set('n', '<C-k>', '<cmd>m .-2<cr>==', { desc = 'Move up' }),
+  -- vim.keymap.set('i', '<A-j>', '<esc><cmd>m .+1<cr>==gi', { desc = 'Move down' }),
+  -- vim.keymap.set('i', '<A-k>', '<esc><cmd>m .-2<cr>==gi', { desc = 'Move up' }),
+  -- vim.keymap.set('v', '<A-j>', ":m '>+1<cr>gv=gv", { desc = 'Move down' }),
+  -- vim.keymap.set('v', '<A-k>', ":m '<-2<cr>gv=gv", { desc = 'Move up' }),
 }
