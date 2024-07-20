@@ -100,6 +100,9 @@ vim.g.have_nerd_font = false
 
 --NOTE: Custom Settings
 
+-- Remove auto comment
+vim.cmd([[autocmd FileType * set formatoptions-=ro]])
+
 vim.opt.smarttab = true
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
